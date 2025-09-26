@@ -6,4 +6,4 @@ if __name__ == '__main__':
   dictionary = yaml.safe_load(stream)
 
   for key, value in dictionary.items():
-    print(key + " : " + str(value))
+    print("\n",key + " : " + str(value))
