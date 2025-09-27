@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.9'
 
 services:
   db: # Container de MySQL
@@ -20,5 +20,5 @@ services:
       - ./config/wp.env
 
 volumes:
-  db_data: {}
+  db_data:
 

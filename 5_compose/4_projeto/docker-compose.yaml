@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   db:
-    image: mysqlcompose
+    image: mysql
     restart: always
     env_file:
       - ./config/db.env
@@ -20,6 +20,8 @@ services:
     ports:
       - "5000:5000"
     restart: always
+    volumes:
+      - ./flask/app.py:/app/app.py
     networks: 
       - dockercompose
 
