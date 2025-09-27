@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app-depoyment
+  name: flask-app-deployment
 spec:
-  replicas: 4
   selector:
     matchLabels:
       app: flask-app
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,6 +14,4 @@ spec:
     spec:
       containers:
         - name: flask
-        # Código antigo do curso
-        # image: matheusbattisti/flask-kub-projeto:5
-          image: matheusbattisti/flask-kub-projeto
+          image: alexandre07/flask-app:2
